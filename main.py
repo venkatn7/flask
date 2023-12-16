@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:6h4C43BhFfD3e6DE4G1e2GfE5facFH-3@mysql.railway.internal:3306/railway"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:6h4C43BhFfD3e6DE4G1e2GfE5facFH-3@mysql.railway.internal:3306/railway"
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
@@ -72,4 +72,4 @@ def get_hello_world():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(debug=True)
