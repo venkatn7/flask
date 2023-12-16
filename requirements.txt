@@ -12,6 +12,7 @@ importlib-metadata==7.0.0
 itsdangerous==2.1.2
 marshmallow==3.20.1
 marshmallow-sqlalchemy==0.29.0
+mysql-connector-python==8.2.0
 mysqlclient==2.2.1
 packaging==23.2
 pip==23.3.1
