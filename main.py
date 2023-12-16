@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:c1Hf-Gfc1hf5fhc--DAhA6HFfbEf6Cbg@mysql:3306/railway"
+import os
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
@@ -72,4 +73,4 @@ def get_hello_world():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
