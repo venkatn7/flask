@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:c1Hf-Gfc1hf5fhc--DAhA6HFfbEf6Cbg@mysql.railway.internal:3306/railway"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:c1Hf-Gfc1hf5fhc--DAhA6HFfbEf6Cbg@mysql:3306/railway"
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
