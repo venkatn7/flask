@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from flask_cors import CORS
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:c1Hf-Gfc1hf5fhc--DAhA6HFfbEf6Cbg@mysql:3306/railway"
 import os
@@ -44,6 +45,9 @@ with app.app_context():
 author_schema = AuthorSchema(many=True)
 book_schema = BookSchema(many=True)
 
+
+# enable CORS
+    CORS(app, resources={r'/*': {'origin': '*'}})
 
 @app.route('/', methods=["POST"])
 def hello_world():  # put application's code here
