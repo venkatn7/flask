@@ -47,7 +47,7 @@ book_schema = BookSchema(many=True)
 
 
 # enable CORS
-    CORS(app, resources={r'/*': {'origin': '*'}})
+CORS(app, resources={r'/*': {'origin': '*'}})
 
 @app.route('/', methods=["POST"])
 def hello_world():  # put application's code here
